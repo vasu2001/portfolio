@@ -47,6 +47,10 @@ AOS.init({
         $(this).addClass("active");
       }
     });
+
+    $(".navbar-collapse a").click(function () {
+      $(".navbar-collapse").collapse("hide");
+    });
   };
   burgerMenu();
 
