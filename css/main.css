@@ -19,3 +19,7 @@
   align-self: center;
   justify-content: center;
 }
+
+.ftco-hireme {
+  z-index: 2;
+}
