@@ -3,3 +3,19 @@
   -ms-touch-action: auto;
   touch-action: auto;
 }
+
+.hamburger-menu {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.navbar-toggler {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-info {
+  align-self: center;
+  justify-content: center;
+}
