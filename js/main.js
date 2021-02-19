@@ -225,6 +225,31 @@ AOS.init({
     easing: "easeInOutQuad",
   });
 
+  // form
+  var form = $(".contact-form");
+  form.submit(function (event) {
+    event.preventDefault();
+
+    var formSubmit = $(".btnSubmit");
+    formSubmit.prop("disabled", true);
+
+    $.ajax({
+      url: "https://sheet.best/api/sheets/3385ea4a-ca37-430b-91f5-a38d998f0a25",
+      type: "POST",
+      data: form.serialize(),
+      success: function (res) {
+        // console.log(res);
+        form.trigger("reset");
+        formSubmit.prop("disabled", false);
+        $(".contact-success").removeClass("invisible");
+      },
+      error: function (err) {
+        console.log(err);
+        formSubmit.prop("disabled", false);
+      },
+    });
+  });
+
   // magnific popup
   $(".image-popup").magnificPopup({
     type: "image",
