@@ -23,3 +23,20 @@
 .ftco-hireme {
   z-index: 2;
 }
+
+#projects-section ul {
+  list-style: none;
+  margin-top: 5px;
+}
+
+#projects-section li {
+  border: 1px solid #999999;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.activeFilter {
+  background-color: #999999;
+  color: #000;
+}

@@ -250,6 +250,17 @@ AOS.init({
     });
   });
 
+  // project section filter
+  var projectIsotope = $(".project-content").isotope({
+    itemSelector: ".project-item",
+    layoutMode: "fitRows",
+  });
+  $("#projects-section li").on("click", function () {
+    $("#projects-section li").removeClass("activeFilter");
+    $(this).addClass("activeFilter");
+    projectIsotope.isotope({ filter: $(this).data("filter") });
+  });
+
   // magnific popup
   $(".image-popup").magnificPopup({
     type: "image",
